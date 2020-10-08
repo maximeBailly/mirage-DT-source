@@ -330,10 +330,10 @@ export class MgSpellsManager {
 
   private getDamagingEffects(spellId: number): MgSpellEffect[] {
     const effects = this.getEffects(spellId, false).filter(
-      (effect) => !effect.targetMask.includes('i'),
+      (effect) => !effect.targetMask?.includes?.('i'),
     );
     const critEffects = this.getEffects(spellId, true).filter(
-      (effect) => !effect.targetMask.includes('i'),
+      (effect) => !effect.targetMask?.includes?.('i'),
     );
 
     const ownFighter = this.instance.fightManager.selfTarget;
