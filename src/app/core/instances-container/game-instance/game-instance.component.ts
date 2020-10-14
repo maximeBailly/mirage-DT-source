@@ -79,6 +79,7 @@ export class GameInstanceComponent implements OnInit, OnDestroy {
         this.instance.events.characterLogin$.subscribe(() => {
           this.instance.actions.removeShopButton();
           this.instance.injecter.addSpellsDoubleTapListener();
+          this.instance.groupManager.autoEnterFight();
         }),
       );
 

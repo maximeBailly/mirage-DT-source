@@ -147,6 +147,7 @@ export interface DTWindow extends Window {
   isoEngine: {
     mapRenderer: {
       getCellSceneCoordinate(cellId: number): { x: number; y: number };
+      mapId: number;
     };
     mapScene: {
       canvas: HTMLCanvasElement;
@@ -159,6 +160,9 @@ export interface DTWindow extends Window {
       ): { x: number; y: number };
     };
     _castSpellImmediately(id: number): void;
+    actorManager: {
+      actors: any;
+    };
   };
 
   singletons: ((index: number) => any) & {
